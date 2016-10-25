@@ -21,4 +21,7 @@ console.log('41',fibonacciMemo(41));
 console.log('41',fibonacciMemo(41));
 console.log('41',fibonacciMemo(41));
 console.log('41',fibonacciMemo(41));
+console.log('41',fibonacciMemo(41));
+console.log('41',fibonacciMemo(41));
+console.log('41',fibonacciMemo(41));
 
