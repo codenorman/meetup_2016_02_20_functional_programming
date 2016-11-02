@@ -22,7 +22,8 @@ var populationByState = function () {
                 }, 0)
             }
         })
-        .sortBy('state')
+        .sortBy('pop')
+        .reverse()
         .value()
 };
 console.log('PopulationByState', populationByState());

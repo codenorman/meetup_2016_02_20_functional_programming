@@ -7,6 +7,7 @@ var words = [
             {
                 lang: 'en',
                 word: 'en field'
+
             },
             {
                 lang: 'sp',
@@ -56,24 +57,7 @@ var words = [
 ];
 
 
-function getWord(key, lang) {
 
-    var word = _.chain(words)
-        .find({'key': key})
-        .value();
-
-    // console.log('word', word);
-    // console.log('value', word.value);
-
-    var lang = _.chain(word.value)
-        .find({'lang': lang})
-        .value();
-
-
-    // console.log('lang', lang)
-    return lang.word;
-
-}
 
 function getWord2(key, lang) {
 
@@ -99,10 +83,11 @@ function getWord2(key, lang) {
 
 }
 
-console.log('result:', getWord2('field', 'en'));
-console.log('result:', getWord2('field', 'sp'));
-console.log('result:', getWord2('corn', 'en'));
-console.log('result:', getWord2('wheat', 'sp'));
+// console.log('result:', getWord2('field', 'en'));
+// console.log('result:', getWord2('field', 'sp'));
+// console.log('result:', getWord2('corn', 'en'));
+// console.log('result:', getWord2('wheat', 'sp'));
+
 
 var translate = _.template('This is a test <%= field %>!');
 
@@ -113,8 +98,8 @@ console.log( translate({field: getWord2('field', 'sp')}));
 _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
 var translate2 = _.template('This is a test {{field}}!');
 
-console.log( translate2({field: getWord2('field', 'en')}));
-console.log( translate2({field: getWord2('field', 'sp')}));
+// console.log( translate2({field: getWord2('field', 'en')}));
+// console.log( translate2({field: getWord2('field', 'sp')}));
 
 
 

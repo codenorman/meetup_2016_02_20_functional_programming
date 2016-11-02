@@ -18,6 +18,7 @@ var selectStateCities = function (state) {
             return {city: item.city, state: item.state}
         })
         .uniqBy('city', 'state')
+        .sortBy('city')
         .value()
 };
 console.log('StateCities', selectStateCities('CA'));

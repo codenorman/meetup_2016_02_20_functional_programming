@@ -16,8 +16,9 @@ console.log('Zipcodes: ', _.size(zips()));
 var totalPopulation = function () {
     var popList = _.map(zips(), 'pop');
     // console.log(popList);
+
     return _.reduce(popList, function (acc, value) {
-        console.log('current:', acc, value)
+        // console.log('current:', acc, value)
         return acc + value;
     }, 0)
 };

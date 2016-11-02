@@ -2,6 +2,7 @@ var _ = require('lodash');
 var fs = require('fs');
 
 var loadzips = function () {
+    console.log('Loading Zips...')
     return JSON.parse(fs.readFileSync('./zips.json', 'utf8'));
 };
 var zips = _.once(loadzips);
